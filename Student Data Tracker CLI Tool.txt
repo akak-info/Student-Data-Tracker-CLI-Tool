@@ -1,0 +1,16 @@
+student_records= {}
+
+
+count = int(input("enter numer of student records you want to add: "))
+
+for i in range(count):
+    roll_number = int(input("enter rollnumber: "))
+    name = input("enter student name: ")
+    marks_1 = float(input("enter subject 1st marks: "))
+    marks_2 = float(input("enter subject 2nd marks: ")) 
+    marks_3 = float(input("enter subject 3rd marks: "))
+
+    if roll_number not in student_records:
+        student_records[roll_number]= {"name":name, "mark_1":marks_1, "mark_2":marks_2, "mark_3":marks_3, "avg_marks":(marks_1 + marks_2 + marks_3)/3}
+
+print(student_records)
